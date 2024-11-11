@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2024-11-10 11:15:42.416247",
@@ -11,9 +12,15 @@
   "column_break_lvqy",
   "conference_type",
   "total_capacity",
+  "is_published",
+  "route",
+  "section_break_hgrc",
+  "checked_in",
+  "display_details_tab",
   "section_break_lskz",
   "mode",
   "address",
+  "city",
   "banner_image",
   "column_break_vaxr",
   "url"
@@ -37,9 +44,11 @@
    "fieldname": "conference_type",
    "fieldtype": "Select",
    "label": "Conference Type",
+   "options": "Free\nPaid",
    "reqd": 1
   },
   {
+   "description": "Calculated by ticket type",
    "fieldname": "total_capacity",
    "fieldtype": "Int",
    "label": "Total Capacity"
@@ -60,7 +69,7 @@
    "depends_on": "eval:doc.mode==\"In Person\"",
    "fieldname": "address",
    "fieldtype": "Small Text",
-   "label": "Address"
+   "label": "Venue"
   },
   {
    "fieldname": "banner_image",
@@ -75,14 +84,47 @@
    "depends_on": "eval:doc.mode==\"Online\"",
    "fieldname": "url",
    "fieldtype": "Data",
-   "label": "URL",
+   "label": "Live stream URL",
    "options": "URL"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "display_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Display Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "is_published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route"
+  },
+  {
+   "fieldname": "section_break_hgrc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checked_in",
+   "fieldtype": "Table",
+   "label": "Checked In",
+   "options": "Conference Check In"
   }
  ],
+ "has_web_view": 1,
  "image_field": "banner_image",
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2024-11-10 20:05:22.783917",
+ "modified": "2024-11-11 15:21:51.055729",
  "modified_by": "Administrator",
  "module": "Conference management",
  "name": "Conference",
@@ -102,6 +144,7 @@
    "write": 1
   }
  ],
+ "route": "conf",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []

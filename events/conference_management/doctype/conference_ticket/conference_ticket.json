@@ -12,7 +12,10 @@
   "full_name_virtual",
   "column_break_cljd",
   "ticket_type",
-  "registration"
+  "registration",
+  "barcode",
+  "section_break_fivq",
+  "checked_in"
  ],
  "fields": [
   {
@@ -59,11 +62,26 @@
    "fieldtype": "Link",
    "label": "Registration",
    "options": "Conference Registration"
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Barcode",
+   "label": "Barcode"
+  },
+  {
+   "fieldname": "section_break_fivq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checked_in",
+   "fieldtype": "Table",
+   "label": "Checked In",
+   "options": "Conference Check In"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-10 20:06:30.862165",
+ "modified": "2024-11-11 15:14:00.482848",
  "modified_by": "Administrator",
  "module": "Conference management",
  "name": "Conference Ticket",

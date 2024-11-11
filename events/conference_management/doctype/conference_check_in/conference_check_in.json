@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-11 15:00:59.503858",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "check_in_at",
+  "scan_here",
+  "section_break_oe2o",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_oe2o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Conference Check In",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "check_in_at",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Check in At"
+  },
+  {
+   "fieldname": "scan_here",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Scan Here",
+   "options": "User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-11 15:12:43.886533",
+ "modified_by": "Administrator",
+ "module": "Conference management",
+ "name": "Conference Check In",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
